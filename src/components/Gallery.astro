@@ -1,0 +1,70 @@
+---
+const { pics, main } = Astro.props
+---
+
+<section class="pt-4 pb-8 px-4">
+  <div class="flex gap-y-4 flex-wrap">
+    <div
+      class={`flex lg:flex-col gap-x-4 w-full lg:gap-x-0 lg:w-3/12 h-auto lg:h-[775px] px-4 ${
+        pics.length >= 3 ? "lg:justify-between" : "gap-y-4"
+      }`}
+    >
+      {
+        pics.map((item, idx) => (
+          <ul class:list={[{ hidden: idx > 2 }, "relative w-full"]}>
+            <a
+              href={item.url}
+              data-zoomable="true"
+              class:list={[
+                "block relative overflow-hidden w-full h-full max-w-full max-h-[140px] md:max-w-full md:max-h-full md:w-full md:h-[245px] bg-gray-100 group focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-accent gallery",
+              ]}
+            >
+              <div class="relative w-full h-full">
+                <div class="absolute bg-black w-[inherit] h-[inherit] bg-opacity-50 flex justify-center items-center">
+                  {idx > 1 && pics.length > 3 && (
+                    <span class="text-4xl sm:text-6xl font-medium text-secondary">
+                      +{pics.length - 3}
+                    </span>
+                  )}
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src={item.url}
+                  alt={item.alt}
+                  title={item.title}
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                />
+              </div>
+            </a>
+          </ul>
+        ))
+      }
+    </div>
+    <div class="block w-full lg:w-9/12 lg:h-[755px] px-4">
+      <img
+        class="h-[293px] lg:h-[775px] w-full object-cover shadow-md"
+        src={main.url}
+        title={main.title}
+        alt={main.title}
+        loading="lazy"
+        width="860"
+        height="775"
+      />
+    </div>
+  </div>
+</section>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+/>
+
+<script type="module" defer>
+  import "https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
+
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    selector: ".gallery",
+  })
+</script>

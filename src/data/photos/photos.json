@@ -1,0 +1,111 @@
+[
+  {
+    "main": {
+      "url": "/assets/logo-photos/017.jpg",
+      "title": "main1",
+      "alt": "main1"
+    },
+    "slug": "vencanja",
+    "photos": [
+      {
+        "title": "slika1",
+        "alt": "slika1",
+        "url": "/assets/logo-photos/001.jpg"
+      },
+      {
+        "title": "slika2",
+        "alt": "slika2",
+        "url": "/assets/logo-photos/002.jpg"
+      },
+      {
+        "title": "slika3",
+        "alt": "slika3",
+        "url": "/assets/logo-photos/003.jpg"
+      },
+      {
+        "title": "slika4",
+        "alt": "slika4",
+        "url": "/assets/logo-photos/004.jpg"
+      },
+      {
+        "title": "slika5",
+        "alt": "slika5",
+        "url": "/assets/logo-photos/005.jpg"
+      },
+      {
+        "title": "slika6",
+        "alt": "slika6",
+        "url": "/assets/logo-photos/006.jpg"
+      }
+    ]
+  },
+  {
+    "main": {
+      "url": "/assets/photos/TIN_7850.JPG",
+      "title": "naslovna",
+      "alt": "naslovna"
+    },
+    "slug": "studio",
+    "photos": [
+      {
+        "title": "slika1",
+        "alt": "slika1",
+        "url": "/assets/photos/TIN_0268.JPG"
+      },
+      {
+        "title": "slika2",
+        "alt": "slika2",
+        "url": "/assets/photos/TIN_2617.JPG"
+      },
+      {
+        "title": "slika3",
+        "alt": "slika3",
+        "url": "/assets/photos/TIN_2784.JPG"
+      },
+      {
+        "title": "slika4",
+        "alt": "slika4",
+        "url": "/assets/photos/TIN_2967.JPG"
+      },
+      {
+        "title": "slika5",
+        "alt": "slika5",
+        "url": "/assets/photos/TIN_3455.JPG"
+      },
+      {
+        "title": "slika6",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_3702.JPG"
+      },
+      {
+        "title": "slika7",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7436.JPG"
+      },
+      {
+        "title": "slika8",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7850.JPG"
+      },
+      {
+        "title": "slika9",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7876.JPG"
+      },
+      {
+        "title": "slika810",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_9404.JPG"
+      }
+    ]
+  },
+  {
+    "videos": [
+      "/assets/Dragana & Vlad.mp4#t=0.5",
+      "/assets/Jelena i Milan.mp4#t=0.5",
+      "/assets/Jelena i Milos.mp4#t=0.5",
+      "/assets/Branislava i Aljosa.mp4#t=0.5"
+    ],
+    "slug": "video-produkcija"
+  }
+]

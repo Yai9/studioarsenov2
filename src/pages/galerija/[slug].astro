@@ -1,0 +1,40 @@
+---
+/** ALLcampaigns */
+import Gallery from "@components/Gallery.astro"
+import VideoGallery from "@components/VideoGallery.astro"
+import Layout from "@layouts/base.layout.astro"
+import { readFile } from "fs/promises"
+import "../../app.css"
+
+export async function getStaticPaths() {
+  const all = await readFile("src/data/photos/photos.json")
+  const data = JSON.parse(all.toString())
+
+  return data.map((item) => {
+    return {
+      params: {
+        slug: item.slug,
+      },
+      props: {
+        item,
+      },
+    }
+  })
+}
+
+const { item } = Astro.props
+const videoGallery = item.slug === 'video-produkcija'
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta charset="UTF-8" />
+<Layout>
+  <div class="mt-[20%] lg:mt-[10%]">
+    <div class="max-w-screen-2xl px-4 mx-auto md:px-8">
+      {videoGallery ? <VideoGallery/> : 
+      <Gallery pics={item.photos} main={item.main} />
+      }
+    </div>
+  </div>
+</Layout>
