@@ -1,6 +1,6 @@
 export const config = {
   srcSetSizes: ["256", "512", "768", "1280"],
-  ogImage: "/og-image.png",
+  ogImage: "/logo.png",
   logo: "/logo.png",
   siteTitle: "Studio Arsenov",
   seo: {
