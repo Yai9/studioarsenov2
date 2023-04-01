@@ -48,6 +48,7 @@ const seoObj = { ...defaultSeo, ...seo }
     <meta name="twitter:creator" content="studioarsenov.com" />
     <link rel="icon" type="image/x-icon" href={config.favico} />
     <link rel="stylesheet" href="src/app.css" />
+    <meta charset="UTF-8" />
     <SEO
       title={seoObj.title}
       description={seoObj.description}
@@ -63,10 +64,7 @@ const seoObj = { ...defaultSeo, ...seo }
         content-intrinsic-size: 1px 2500px;
       }
     </style>
-
-    <meta charset="UTF-8" />
   </head>
-
   <body>
     <Header />
     <slot />
