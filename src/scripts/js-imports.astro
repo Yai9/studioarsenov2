@@ -169,55 +169,6 @@
   }
 </script>
 <script defer>
-  document.addEventListener("alpine:init", () => {
-    Alpine.data("testimonials", () => ({
-      text: "",
-      textArray: ["Develop", "Maintain"],
-      textIndex: 0,
-      charIndex: 0,
-      pauseEnd: 1500,
-      cursorSpeed: 420,
-      pauseStart: 20,
-      typeSpeed: 150,
-      direction: "forward",
-      init() {
-        const self = this
-        let typingInterval = setInterval(startTyping, self.typeSpeed)
-
-        function startTyping() {
-          let current = self.textArray[self.textIndex]
-          if (self.charIndex > current.length) {
-            self.direction = "backward"
-            clearInterval(typingInterval)
-            setTimeout(function () {
-              typingInterval = setInterval(startTyping, self.typeSpeed)
-            }, self.pauseEnd)
-          }
-
-          self.text = current.substring(0, self.charIndex)
-          if (self.direction == "forward") {
-            self.charIndex += 1
-          } else {
-            if (self.charIndex == 0) {
-              self.direction = "forward"
-              clearInterval(typingInterval)
-              setTimeout(function () {
-                self.textIndex += 1
-                if (self.textIndex >= self.textArray.length) {
-                  self.textIndex = 0
-                }
-
-                typingInterval = setInterval(startTyping, self.typeSpeed)
-              }, self.pauseStart)
-            }
-            self.charIndex -= 1
-          }
-        }
-      },
-    }))
-  })
-</script>
-<script defer>
   const callback = function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -249,4 +200,18 @@
       ud_header.classList.remove("sticky-header")
     }
   }
+</script>
+<script defer>
+  function preload(imageArray, index) {
+        index = index || 0;
+        if (imageArray && imageArray.length > index) {
+            var img = new Image ();
+            img.onload = function() {
+                preload(imageArray, index + 1);
+            }
+            img.src = images[index]['https://studioarsenov2.vercel.app/'];
+}
+/* images is an array with image metadata */
+  }
+preload(images);
 </script>
