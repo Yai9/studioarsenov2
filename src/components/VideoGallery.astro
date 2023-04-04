@@ -10,8 +10,16 @@ const videoData = data.filter((items) => items.videos)
     Video Galerija
   </h1>
   
-  <h2 class="text-3xl text-white font-semibold text-center mb-20">
-    Uskoro!
-  </h2>
+  {
+    videoData[0].videos.map((video) => (
+      <video
+        class="mx-auto rounded-3xl w-[800px] h-full"
+        controls
+        controlslist="nofullscreen"
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+    ))
+  }
   
 </div>
