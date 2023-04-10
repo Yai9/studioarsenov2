@@ -3,13 +3,15 @@ import Layout from "@layouts/base.layout.astro"
 import Hero from "@components/Hero.astro"
 import { readFile } from "fs/promises"
 import Contact from "@components/Contact.astro"
-import '../app.css'
+import "../app.css"
+import Carousel from "@components/Carousel.astro"
 
 const all = await readFile("src/data/services/services.json")
 const services = JSON.parse(all.toString())
 ---
+
 <Layout>
-  <Hero subtitle="Studio Arsenov"/>
+  <Hero subtitle="Studio Arsenov" />
   <div class="top-section">
     <!-- about us start -->
     <div id="o-nama">
@@ -41,7 +43,7 @@ const services = JSON.parse(all.toString())
               <br />
               <a
                 href="/o-nama"
-                class="relative mt-6 text-lg leading-8 text-white"
+                class="relative mt-6 text-lg leading-8 font-medium text-white"
                 >Saznajte više</a
               >
             </div>
@@ -127,6 +129,9 @@ const services = JSON.parse(all.toString())
         <h3 class="text-center text-white text-4xl py-10">
           Šta klijenti kažu o nama...
         </h3>
+        <!--carousel -->
+
+        <Carousel />
         <div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
           <div
             class="py-12 px-6 md:flex md:flex-col md:border-r md:border-gray-300 md:py-16 md:pl-0 md:pr-10 lg:pr-16"
@@ -209,7 +214,7 @@ const services = JSON.parse(all.toString())
       </section>
       <!--end testimonials -->
       <!--contact start-->
-      <Contact/>
+      <Contact />
       <!--contact end -->
     </div>
   </div>

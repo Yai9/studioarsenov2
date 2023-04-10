@@ -13,10 +13,11 @@ const { pics, main } = Astro.props
         pics.map((item, idx) => (
           <ul class:list={[{ hidden: idx > 2 }, "relative w-full"]}>
             <a
+              id="pic_link"
               href={item.url}
               data-zoomable="true"
               class:list={[
-                "block relative overflow-hidden w-full h-full max-w-full max-h-[140px] md:max-w-full md:max-h-full md:w-full md:h-[245px] bg-gray-100 group focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-accent gallery",
+                "gallery block relative overflow-hidden w-full h-full max-w-full max-h-[140px] md:max-w-full md:max-h-full md:w-full md:h-[245px] bg-gray-100 group focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-accent",
               ]}
             >
               <div class="relative w-full h-full">
@@ -27,15 +28,17 @@ const { pics, main } = Astro.props
                     </span>
                   )}
                 </div>
-                <img
-                  class="object-cover w-full h-full"
-                  src={item.url}
-                  alt={item.alt}
-                  title={item.title}
-                  loading="lazy"
-                  width="200"
-                  height="200"
-                />
+                <div>
+                  <img
+                    class="object-cover w-full h-full"
+                    src={item.url}
+                    alt={item.alt}
+                    title={item.title}
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  />
+                </div>
               </div>
             </a>
           </ul>
@@ -66,5 +69,24 @@ const { pics, main } = Astro.props
   const lightbox = GLightbox({
     touchNavigation: true,
     selector: ".gallery",
+  })
+</script>
+<script defer>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("screenSize", () => ({
+      mobile: false,
+      isMobile() {
+        const resizeObserver = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            if (entry.contentRect.width < 768) {
+              this.mobile = true
+            } else {
+              this.mobile = false
+            }
+          }
+        })
+        resizeObserver.observe(document.body)
+      },
+    }))
   })
 </script>

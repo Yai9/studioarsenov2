@@ -14,7 +14,7 @@ export const config = {
   contact: {
     phone: "+381641300913",
     email: "studioarsenov@gmail.com",
-    address: `Novosadska 4. 22320 Inđija`,
+    address: "Novi Sad 21000",
   },
   menu: [
     {
@@ -28,6 +28,40 @@ export const config = {
     {
       title: "USLUGE",
       url: "/#usluge",
+    },
+    {
+      title: "UTISCI",
+      url: "/#utisci",
+    },
+    {
+      title: "KONTAKT",
+      url: "/#kontakt",
+    },
+  ],
+  mobileMenu: [
+    {
+      title: "NASLOVNA",
+      url: "/#",
+    },
+    {
+      title: "O NAMA",
+      url: "/#o-nama",
+    },
+    {
+      title: "USLUGE",
+      url: "/#usluge",
+    },
+    {
+      title: "FOTO GALERIJA",
+      url: "/galerija/vencanja",
+    },
+    {
+      title: "VIDEO GALERIJA",
+      url: "/galerija/video-produkcija",
+    },
+    {
+      title: "SLIKE IZ STUDIJA",
+      url: "/galerija/studio",
     },
     {
       title: "UTISCI",
