@@ -1,7 +1,7 @@
 [
   {
     "main": {
-      "url": "/assets/logo-photos/017.jpg",
+      "url": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
       "title": "main1",
       "alt": "main1"
     },
@@ -10,32 +10,17 @@
       {
         "title": "slika1",
         "alt": "slika1",
-        "url": "/assets/logo-photos/001.jpg"
+        "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
       },
       {
         "title": "slika2",
         "alt": "slika2",
-        "url": "/assets/logo-photos/002.jpg"
+        "url": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
       },
       {
         "title": "slika3",
         "alt": "slika3",
-        "url": "/assets/logo-photos/003.jpg"
-      },
-      {
-        "title": "slika4",
-        "alt": "slika4",
-        "url": "/assets/logo-photos/004.jpg"
-      },
-      {
-        "title": "slika5",
-        "alt": "slika5",
-        "url": "/assets/logo-photos/005.jpg"
-      },
-      {
-        "title": "slika6",
-        "alt": "slika6",
-        "url": "/assets/logo-photos/006.jpg"
+        "url": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
       }
     ]
   },
