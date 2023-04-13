@@ -23,17 +23,18 @@ export async function getStaticPaths() {
 }
 
 const { item } = Astro.props
-const videoGallery = item.slug === 'video-produkcija'
+const videoGallery = item.slug === "video-produkcija"
 ---
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<meta charset="UTF-8" />
 <Layout>
   <div class="mt-[20%] lg:mt-[10%]">
     <div class="max-w-screen-2xl px-4 mx-auto md:px-8">
-      {videoGallery ? <VideoGallery/> : 
-      <Gallery pics={item.photos} main={item.main} />
+      {
+        videoGallery ? (
+          <VideoGallery />
+        ) : (
+          <Gallery pics={item.photos} main={item.main} />
+        )
       }
     </div>
   </div>
