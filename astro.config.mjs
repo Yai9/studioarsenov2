@@ -1,7 +1,7 @@
-import { defineConfig } from "astro/config";
-import critters from "astro-critters";
-import tailwind from "@astrojs/tailwind";
-import compress from "astro-compress";
+import { defineConfig } from "astro/config"
+import critters from "astro-critters"
+import tailwind from "@astrojs/tailwind"
+import compress from "astro-compress"
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,4 +11,4 @@ export default defineConfig({
     },
   },
   integrations: [critters(), tailwind(), compress()],
-});
+})

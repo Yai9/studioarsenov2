@@ -1,4 +1,5 @@
 ---
+import JS from "../scripts/glightbox.astro"
 const { pics, main } = Astro.props
 ---
 
@@ -15,10 +16,11 @@ const { pics, main } = Astro.props
             <a
               href={item.url}
               data-zoomable="true"
+              data-draggable
+              data-glightbox
               class:list={[
                 "block relative overflow-hidden w-full h-full max-w-full max-h-[140px] md:max-w-full md:max-h-full md:w-full md:h-[245px] bg-gray-100 group focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 gallery",
               ]}
-              data-title={item.title}
             >
               <div class="relative w-full h-full">
                 <div class="absolute bg-primary w-[inherit] h-[inherit] bg-opacity-50 flex justify-center items-center">
@@ -52,17 +54,4 @@ const { pics, main } = Astro.props
     </div>
   </div>
 </section>
-
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-/>
-
-<script type="module" defer>
-  import "https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
-
-  const lightbox = GLightbox({
-    touchNavigation: true,
-    selector: ".gallery",
-  })
-</script>
+<JS />

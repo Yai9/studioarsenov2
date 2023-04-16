@@ -1,0 +1,19 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+/>
+<script type="module" defer>
+  import "https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js";
+
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    selector: ".gallery",
+  });
+  const links = document.querySelectorAll("[data-glightbox]");
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      lightbox.open(link);
+    })
+  })
+</script>
