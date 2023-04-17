@@ -60,7 +60,7 @@ export const config = {
       url: "/galerija/video-produkcija",
     },
     {
-      title: "SLIKE IZ STUDIJA",
+      title: "FOTOGRAFIJE IZ STUDIJA",
       url: "/galerija/studio",
     },
     {
