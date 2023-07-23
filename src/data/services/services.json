@@ -1,17 +1,17 @@
 [
-    {
-        "title":"Fotografije sa venčanja",
-        "description":"Tu smo da sa vama podelimo radost i uveličamo vaš dogadjaj i doprinesemo da on ostane upamćen.",
-        "url":"/galerija/vencanja"
-    },
-    {
-      "title": "Fotografije u studiju",
-      "description": "Ukoliko želite profesionalne fotografije, stojima usluzi vašim željama i kreativnosti.",
-      "url": "/galerija/studio"
-    },
-    {
-      "title": "Video produkcija",
-      "description": "Ukoliko želite da svaki trenutak vašeg posebnog dana ostane zabeležen, na pravom ste mestu.",
-      "url": "/galerija/video-produkcija"
-    }
+  {
+    "title": "Fotografije sa venčanja",
+    "description": "U svakom kadru vidimo priliku da stvorimo večnost i zabeležimo trenutke koji će dirnuti Vaše srce.",
+    "url": "/galerija/vencanja"
+  },
+  {
+    "title": "Fotografije u studiju",
+    "description": "Svaka fotografija koju napravimo je pažljivo osmišljena kako bi istakla ono najbolje u Vama i Vašim voljenima.",
+    "url": "/galerija/studio"
+  },
+  {
+    "title": "Video produkcija",
+    "description": "Ukoliko želite da svaki trenutak vašeg posebnog dana ostane zabeležen, na pravom ste mestu.",
+    "url": "/galerija/video-produkcija"
+  }
 ]

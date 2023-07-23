@@ -35,10 +35,10 @@ const services = JSON.parse(all.toString())
                 ŽELITE DA ZNATE VIŠE O NAMA?<br />
               </h2>
               <p class="relative mt-6 text-lg leading-8 text-gray-200">
-                Sa iskustvom od više od dve decenije, naš studio se ističe u
-                pružanju vrhunskih usluga svojim klijentima, kao i ambicijom da
-                na svaku osobu sa kojom ostvarimo saradnju ostavimo trajan
-                utisak.
+                Svaka fotografija koju stvaramo je priča za sebe, sačinjena od
+                emocija, boja i svetlosti. Naš tim stručnih fotografa ima
+                jedinstven talenat da uhvati trenutke koji će vam zauvek ostati
+                u sećanju.
               </p>
               <br />
               <a
@@ -65,12 +65,13 @@ const services = JSON.parse(all.toString())
                 <h2
                   class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
                 >
-                  Vi ste tu da nam kažete šta želite, mi smo tu da Vaše želje
-                  ostanu zapisane i ostvarene...
+                  Dozvolite nam da Vam pomognemo da zabeležite čaroliju života
+                  kroz naš objektiv.
                 </h2>
                 <p class="mt-6 text-lg leading-8 text-gray-300">
-                  Jedinstven osećaj je ono čemu smo posvećeni i zahvalni smo na
-                  prilici da ostavimo trag i budemo deo onoga sto se pamti.
+                  Bilo da se radi o Vašem venčanju, porodičnom okupljanju ili
+                  posebnom događaju, mi smo tu da Vaše uspomene pretvorimo u
+                  umetnost.
                 </p>
               </div>
               <div
@@ -79,15 +80,20 @@ const services = JSON.parse(all.toString())
                 <dl
                   class="space-y-8 text-base leading-7 text-gray-300 lg:max-w-none"
                 >
+                  <h3 class="text-white text-3xl p-4">
+                    Pregledajte galerije naših radova...
+                  </h3>
                   {
                     services.map((service) => (
                       <a href={service.url}>
                         <div class="heading-underline relative p-4 rounded-t-3xl transition-all cursor-pointer hover:bg-primary/30">
-                          <dt class="text-xl inline-block font-semibold text-white">
+                          <dt class="text-xl inline-block font-semibold text-gray-200">
                             {service.title}
                           </dt>
                           <br />
-                          <dd class="inline">{service.description}</dd>
+                          <dd class="inline text-gray-300">
+                            {service.description}
+                          </dd>
                         </div>
                       </a>
                     ))
