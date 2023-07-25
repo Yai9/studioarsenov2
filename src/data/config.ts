@@ -34,6 +34,15 @@ export const config = {
       url: "/#utisci",
     },
     {
+      title: "GALERIJA",
+      url: "#",
+      submenus: [
+        { title: "FOTO GALERIJA", url: "/galerija/vencanja" },
+        { title: "FOTOGRAFIJE IZ STUDIJA", url: "/galerija/studio" },
+        { title: "VIDEO GALERIJA", url: "/galerija/video-produkcija" },
+      ],
+    },
+    {
       title: "KONTAKT",
       url: "/#kontakt",
     },

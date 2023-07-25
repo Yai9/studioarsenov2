@@ -1,5 +1,6 @@
 ---
 import { config } from "@data/config"
+import Menu from "./Menu.svelte"
 import MobileMenu from "./MobileMenu.astro"
 ---
 
@@ -146,21 +147,7 @@ import MobileMenu from "./MobileMenu.astro"
           />
         </a>
         <!-- menu -->
-        <ul class="flex flex-col mt-2 md:ml-auto md:flex-row md:mt-0">
-          {
-            config.menu.map((item) => (
-              <li>
-                <a
-                  class="block px-6 py-1 group tracking-wide whitespace-nowrap lg:py-3 text-secondary hover:text-opacity-30 focus:text-opacity-30"
-                  href={item.url}
-                  title={item.title}
-                >
-                  {item.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <Menu client:idle menu={config.menu} />
       </div>
       <!-- end desktop menu -->
     </div>
