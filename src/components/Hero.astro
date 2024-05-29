@@ -1,0 +1,128 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<!-- Demo styles -->
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+  }
+</style>
+
+<!-- Swiper -->
+<div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div
+        class="absolute inset-0 bg-gradient-to-b opacity-50 from-black to-transparent z-10"
+      >
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="/assets/photos/Z6D_4328b.png"
+          alt="sliderImage1"
+          title="sliderImage1"
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          width="348.51"
+          height="936"
+          loading="eager"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          src="/assets/photos/DEJ_3059.png"
+          alt="sliderImage2"
+          title="sliderImage2"
+          width="348.51"
+          height="936"
+          loading="lazy"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          src="/assets/photos/DEJ_8980.png"
+          alt="sliderImage3"
+          title="sliderImage3"
+          width="348.51"
+          height="936"
+          loading="lazy"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          src="/assets/photos/DJI_0154.png"
+          alt="sliderImage4"
+          title="sliderImage4"
+          width="348.51"
+          height="936"
+          loading="lazy"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          src="/assets/photos/DEJ_8689.png"
+          alt="sliderImage4"
+          title="sliderImage4"
+          width="348.51"
+          height="936"
+          loading="lazy"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="h-[440px] w-full object-cover sm:h-[760px]"
+          src="/assets/photos/DEJ_1544.png"
+          alt="sliderImage5"
+          title="sliderImage5"
+          width="348.51"
+          height="936"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Swiper JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+></script>
+
+<!-- Initialize Swiper -->
+<script type="module" defer>
+  var swiper3 = new Swiper(".mySwiper", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  })
+</script>

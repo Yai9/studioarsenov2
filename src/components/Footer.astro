@@ -1,0 +1,47 @@
+---
+import { config } from "@data/config"
+import Icon from "astro-icon"
+---
+
+<footer
+  class="w-full relative bg-fixed bg-cover bg-center flex justify-center items-center"
+>
+  <div class="w-full bg-transparent sm:pt-10 lg:pt-6">
+    <div class="px-4 mx-auto max-w-7xl md:px-8">
+      <div class="grid gap-4 pt-10 lg:pt-6">
+        <div class="grid grid-cols-2 col-span-2 justify-between">
+          <div class="gap-4 w-full">
+            {
+              config.socials.map((social) => (
+                <a
+                  href={social.url}
+                  target="_blank"
+                  title={social.title}
+                  class="text-gray-400 w-6 inline-flex transition m-1 duration-100 hover:text-gray-500 active:text-gray-600"
+                >
+                  <Icon name={social.icon} />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="text-sm text-center justify-center col-span-2 text-white">
+          © {new Date().getFullYear()} - <a href="https://studioarsenov.com"
+            >Copyright ©{new Date().getFullYear()} All rights reserved Studio Arsenov</a
+          >
+        </div>
+        <div
+          class="py-8 text-sm text-center justify-center col-span-2 text-gray-400 border-t"
+        >
+          <a
+            href="https://politedigital.com"
+            target="_blank"
+            title="Website development"
+            >Handcrafted by <strong>PoliteDigital</strong></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

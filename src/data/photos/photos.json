@@ -1,0 +1,214 @@
+[
+  {
+    "main": {
+      "url": "/assets/logo-photos/017.jpg",
+      "title": "main1",
+      "alt": "main1"
+    },
+    "slug": "vencanja",
+    "photos": [
+      {
+        "title": "slika1",
+        "alt": "slika1",
+        "url": "/assets/logo-photos/001.jpg"
+      },
+      {
+        "title": "slika2",
+        "alt": "slika2",
+        "url": "/assets/logo-photos/002.jpg"
+      },
+      {
+        "title": "slika3",
+        "alt": "slika3",
+        "url": "/assets/logo-photos/003.jpg"
+      },
+      {
+        "title": "slika4",
+        "alt": "slika4",
+        "url": "/assets/logo-photos/004.jpg"
+      },
+      {
+        "title": "slika5",
+        "alt": "slika5",
+        "url": "/assets/logo-photos/005.jpg"
+      },
+      {
+        "title": "slika6",
+        "alt": "slika6",
+        "url": "/assets/logo-photos/006.jpg"
+      },
+      {
+        "title": "slika7",
+        "alt": "slika7",
+        "url": "/assets/logo-photos/007.jpg"
+      },
+      {
+        "title": "slika8",
+        "alt": "slika8",
+        "url": "/assets/logo-photos/008.jpg"
+      },
+      {
+        "title": "slika9",
+        "alt": "slika9",
+        "url": "/assets/logo-photos/009.jpg"
+      },
+      {
+        "title": "slika11",
+        "alt": "slika11",
+        "url": "/assets/logo-photos/011.jpg"
+      },
+      {
+        "title": "slika12",
+        "alt": "slika12",
+        "url": "/assets/logo-photos/012.jpg"
+      },
+      {
+        "title": "slika13",
+        "alt": "slika13",
+        "url": "/assets/logo-photos/013.jpg"
+      },
+      {
+        "title": "slika14",
+        "alt": "slika14",
+        "url": "/assets/logo-photos/014.jpg"
+      },
+      {
+        "title": "slika15",
+        "alt": "slika15",
+        "url": "/assets/logo-photos/015.jpg"
+      },
+      {
+        "title": "slika16",
+        "alt": "slika16",
+        "url": "/assets/logo-photos/016.jpg"
+      },
+      {
+        "title": "slika17",
+        "alt": "slika17",
+        "url": "/assets/logo-photos/017.jpg"
+      },
+      {
+        "title": "slika18",
+        "alt": "slika18",
+        "url": "/assets/logo-photos/018.jpg"
+      },
+      {
+        "title": "slika19",
+        "alt": "slika19",
+        "url": "/assets/logo-photos/169.jpg"
+      },
+      {
+        "title": "slika20",
+        "alt": "slika20",
+        "url": "/assets/logo-photos/172.jpg"
+      },
+      {
+        "title": "slika21",
+        "alt": "slika21",
+        "url": "/assets/logo-photos/DEJ_0701.JPG"
+      },
+      {
+        "title": "slika22",
+        "alt": "slika22",
+        "url": "/assets/logo-photos/DEJ_0720.JPG"
+      },
+      {
+        "title": "slika22",
+        "alt": "slika22",
+        "url": "/assets/photos/DEJ_1676.jpg"
+      },
+      {
+        "title": "slika23",
+        "alt": "slika23",
+        "url": "/assets/photos/DEJ_9298.jpg"
+      },
+      {
+        "title": "slika24",
+        "alt": "slika24",
+        "url": "/assets/photos/DEJ_9473.jpg"
+      },
+      {
+        "title": "slika25",
+        "alt": "slika25",
+        "url": "/assets/photos/DJI_0154.png"
+      },
+      {
+        "title": "slika25",
+        "alt": "slika25",
+        "url": "/assets/photos/DJI_0159.JPG"
+      },
+      {
+        "title": "slika26",
+        "alt": "slika26",
+        "url": "/assets/photos/small-img-3.png"
+      }
+    ]
+  },
+  {
+    "main": {
+      "url": "/assets/photos/TIN_7850.JPG",
+      "title": "naslovna",
+      "alt": "naslovna"
+    },
+    "slug": "studio",
+    "photos": [
+      {
+        "title": "slika1",
+        "alt": "slika1",
+        "url": "/assets/photos/TIN_0268.JPG"
+      },
+      {
+        "title": "slika2",
+        "alt": "slika2",
+        "url": "/assets/photos/TIN_2617.JPG"
+      },
+      {
+        "title": "slika3",
+        "alt": "slika3",
+        "url": "/assets/photos/TIN_2784.JPG"
+      },
+      {
+        "title": "slika4",
+        "alt": "slika4",
+        "url": "/assets/photos/TIN_2967.JPG"
+      },
+      {
+        "title": "slika5",
+        "alt": "slika5",
+        "url": "/assets/photos/TIN_3455.JPG"
+      },
+      {
+        "title": "slika6",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_3702.JPG"
+      },
+      {
+        "title": "slika7",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7436.JPG"
+      },
+      {
+        "title": "slika8",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7850.JPG"
+      },
+      {
+        "title": "slika9",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_7876.JPG"
+      },
+      {
+        "title": "slika810",
+        "alt": "slika6",
+        "url": "/assets/photos/TIN_9404.JPG"
+      }
+    ]
+  },
+  {
+    "videos": [
+      "https://player.vimeo.com/video/815124115?h=a73e2088f8?title=0",
+      "https://player.vimeo.com/video/818636217?title=0"
+    ],
+    "slug": "video-produkcija"
+  }
+]
