@@ -1,6 +1,10 @@
 /node_modules
 .vercel
+<<<<<<< HEAD
 /public/assets/Branislava i Aljosa.mp4
 /public/assets/Dragana & Vlad.mp4
 /public/assets/Jelena i Milan.mp4
 /public/assets/Jelena i Milos.mp4
+=======
+/public/assets/
+>>>>>>> 552c3972945f99d327a3f642b579b6507c8d1234

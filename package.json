@@ -9,19 +9,19 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/node": "^5.0.0",
+    "@astrojs/node": "^8.2.5",
     "@astrojs/partytown": "^1.2.0",
-    "@astrojs/svelte": "^3.1.0",
-    "@astrojs/tailwind": "^3.0.0-beta.1",
+    "@astrojs/svelte": "^5.4.0",
+    "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^18.7.13",
     "@types/slug": "^5.0.3",
-    "astro": "^2.3.0",
-    "astro-compress": "^1.1.35",
-    "astro-critters": "0.0.9",
+    "astro": "^4.9.0",
+    "astro-compress": "^2.2.25",
+    "astro-critters": "2.1.8",
     "astro-icon": "^0.7.1",
     "astro-imagetools": "^0.6.10",
     "astro-seo": "^0.5.0",
@@ -35,7 +35,7 @@
     "tailwindcss": "^3.1.4"
   },
   "dependencies": {
-    "@astrojs/vercel": "^3.0.0",
+    "@astrojs/vercel": "^7.6.0",
     "glightbox": "^3.2.0",
     "preact": "^10.7.3"
   }
