@@ -1,3 +1,10 @@
+---
+import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
+import { Image } from "astro:assets";
+
+const imgArr = ['https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1771_1_icao9b.jpg', 'https://res.cloudinary.com/studioarsenov/image/upload/v1716820319/DEJ_4567_nk2m42.jpg', 'https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_7806_iyo9jv.jpg','https://res.cloudinary.com/studioarsenov/image/upload/v1716910455/wedding4_ygtrq0.jpg','https://res.cloudinary.com/studioarsenov/image/upload/v1716911684/Z6D_4328b_tqnwvd.png','https://res.cloudinary.com/studioarsenov/image/upload/v1716911875/wedding3_x95id7.jpg']
+---
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -32,73 +39,20 @@
         class="absolute inset-0 bg-gradient-to-b opacity-50 from-black to-transparent z-10"
       >
       </div>
-      <div class="swiper-slide">
-        <img
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1771_1_icao9b.jpg"
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          width="348.51"
-          height="936"
-          loading="eager"
-        />
-      </div>
 
-      <div class="swiper-slide">
-        <img
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820319/DEJ_4567_nk2m42.jpg"
-          alt="sliderImage2"
-          title="sliderImage2"
-          width="348.51"
-          height="936"
-          loading="lazy"
-        />
-      </div>
-      <div class="swiper-slide">
-        <img
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_7806_iyo9jv.jpg"
-          alt="sliderImage3"
-          title="sliderImage3"
-          width="348.51"
-          height="936"
-          loading="lazy"
-        />
-      </div>
-      <div class="swiper-slide">
-        <img
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716910455/wedding4_ygtrq0.jpg"
-          alt="sliderImage4"
-          title="sliderImage4"
-          width="348.51"
-          height="936"
-          loading="lazy"
-        />
-      </div>
-      <div class="swiper-slide">
-        <img
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911684/Z6D_4328b_tqnwvd.png"
-          alt="sliderImage4"
-          title="sliderImage4"
-          width="348.51"
-          height="936"
-          loading="lazy"
-        />
-      </div>
-      <div class="swiper-slide">
-        <img
-          class="h-[440px] w-full object-cover sm:h-[900px]"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911875/wedding3_x95id7.jpg"
-          alt="sliderImage5"
-          title="sliderImage5"
-          width="348.51"
-          height="936"
-          loading="lazy"
-        />
-      </div>
+      {imgArr.map((item,index)=>(
+        <div class="swiper-slide">
+          <Image
+            class="h-[440px] w-full object-cover object-center sm:h-[900px]"
+            src={optimizeCloudinaryImage(item,2500,1980)}
+            alt={'Slika ' + index}
+            title={'Slika ' + index}
+            width="348.51"
+            height="936"
+            loading="eager"
+          />
+        </div>
+      ))}
     </div>
   </div>
 </div>

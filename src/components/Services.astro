@@ -1,57 +1,140 @@
+---
+import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
+---
+
 <div class="bg-primary">
-    <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">Zabeležite čaroliju života
-            kroz naš objektiv.</h2>
-        <p class="mt-4 text-gray-300"> Bilo da se radi o Vašem venčanju, porodičnom okupljanju ili
-            posebnom događaju, mi smo tu da Vaše uspomene pretvorimo u
-            umetnost.</p>
+  <div
+    class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
+  >
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
+        Zabeležite čaroliju života kroz naš objektiv.
+      </h2>
+      <p class="mt-4 text-gray-300">
+        Bilo da se radi o Vašem venčanju, porodičnom okupljanju ili posebnom
+        događaju, mi smo tu da Vaše uspomene pretvorimo u umetnost.
+      </p>
+    </div>
+
+    <div class="mt-16 space-y-16">
+      <div
+        class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+      >
+        <div
+          class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-1"
+        >
+          <h3 class="text-xl font-medium text-secondary">
+            Fotografije sa venčanja
+          </h3>
+          <p class="mt-2 text-base text-gray-400">
+            U svakom kadru vidimo priliku da stvorimo večnost i zabeležimo
+            trenutke koji će dirnuti Vaše srce.
+          </p>
+          <div class="mt-10 flex">
+            <a
+              href="/galerija/vencanja"
+              class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >Pregledajte foto galeriju <span aria-hidden="true">&rarr;</span
+              ></a
+            >
+          </div>
+        </div>
+        <div
+          class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5"
+        >
+          <div
+            class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100"
+          >
+            <img
+              src={optimizeCloudinaryImage(
+                "https://res.cloudinary.com/studioarsenov/image/upload/v1716820339/TIN_1272_xjrp1b.jpg",
+                1800,
+                1000
+              )}
+              alt="White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull."
+              class="object-cover object-center"
+            />
+          </div>
+        </div>
       </div>
-  
-      <div class="mt-16 space-y-16">
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-          <div class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-1">
-            <h3 class="text-xl font-medium text-secondary">Fotografije sa venčanja</h3>
-            <p class="mt-2 text-base text-gray-400">U svakom kadru vidimo priliku da stvorimo večnost i zabeležimo trenutke koji će dirnuti Vaše srce.</p>
-            <div class="mt-10 flex">
-                <a href="/galerija/vencanja" class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Pregledajte foto galeriju <span aria-hidden="true">&rarr;</span></a>
-              </div>
-          </div>
-          <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5">
-            <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-              <img src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820339/TIN_1272_xjrp1b.jpg" alt="White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull." class="object-cover object-center">
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-          <div class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-8 xl:col-start-9">
-            <h3 class="text-xl font-medium text-secondary">Fotografije u studiju</h3>
-            <p class="mt-2 text-base text-gray-400">Svaka fotografija koju napravimo je pažljivo osmišljena kako bi istakla ono najbolje u Vama i Vašim voljenima.</p>
-            <div class="mt-10 flex">
-                <a href="/galerija/studio" class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Pregledajte foto galeriju <span aria-hidden="true">&rarr;</span></a>
-              </div>
-          </div>
-          <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-1">
-            <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-              <img src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1771_1_icao9b.jpg" alt="Detail of zipper pull with tan leather and silver rivet." class="object-cover object-center">
-            </div>
+      <div
+        class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+      >
+        <div
+          class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-8 xl:col-start-9"
+        >
+          <h3 class="text-xl font-medium text-secondary">
+            Fotografije u studiju
+          </h3>
+          <p class="mt-2 text-base text-gray-400">
+            Svaka fotografija koju napravimo je pažljivo osmišljena kako bi
+            istakla ono najbolje u Vama i Vašim voljenima.
+          </p>
+          <div class="mt-10 flex">
+            <a
+              href="/galerija/studio"
+              class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >Pregledajte foto galeriju <span aria-hidden="true">&rarr;</span
+              ></a
+            >
           </div>
         </div>
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-            <div class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-1">
-              <h3 class="text-xl font-medium text-secondary">Video produkcija</h3>
-              <p class="mt-2 text-base text-gray-400">Ukoliko želite da svaki trenutak vašeg posebnog dana ostane zabeležen, na pravom ste mestu.</p>
-              <div class="mt-10 flex">
-                <a href="/galerija/video-produkcija" class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Pregledajte video galeriju <span aria-hidden="true">&rarr;</span></a>
-              </div>
-            </div>
-            <div class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5">
-              <div class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
-                <img src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_9322_ymblhf.jpg" alt="White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull." class="object-cover object-center">
-              </div>
-            </div>
+        <div
+          class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-1"
+        >
+          <div
+            class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100"
+          >
+            <img
+              src={optimizeCloudinaryImage(
+                "https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1771_1_icao9b.jpg",
+                1800,
+                1000
+              )}
+              alt="Detail of zipper pull with tan leather and silver rivet."
+              class="object-cover object-center"
+            />
           </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+      >
+        <div
+          class="mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 lg:col-start-1"
+        >
+          <h3 class="text-xl font-medium text-secondary">Video produkcija</h3>
+          <p class="mt-2 text-base text-gray-400">
+            Ukoliko želite da svaki trenutak vašeg posebnog dana ostane
+            zabeležen, na pravom ste mestu.
+          </p>
+          <div class="mt-10 flex">
+            <a
+              href="/galerija/video-produkcija"
+              class="rounded-md hover:bg-secondary border-[1px] border-secondary px-3.5 py-2.5 text-sm font-semibold text-secondary hover:text-primary transition-all shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >Pregledajte video galeriju <span aria-hidden="true">&rarr;</span
+              ></a
+            >
+          </div>
+        </div>
+        <div
+          class="flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 lg:col-start-6 xl:col-start-5"
+        >
+          <div
+            class="aspect-h-2 aspect-w-4 overflow-hidden rounded-lg bg-gray-100"
+          >
+            <img
+              src={optimizeCloudinaryImage(
+                "https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_9322_ymblhf.jpg",
+                1800,
+                1000
+              )}
+              alt="White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull."
+              class="object-cover object-center"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>

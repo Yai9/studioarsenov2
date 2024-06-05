@@ -1,95 +1,92 @@
 ---
-import Layout from "@layouts/base.layout.astro"
-import Hero from "@components/Hero.astro"
-import { readFile } from "fs/promises"
-import Contact from "@components/Contact.astro"
-import Carousel from "@components/Carousel.astro"
-import "../app.css"
-import About from "@components/About.astro"
-import Services from "@components/Services.astro"
+import Layout from "@layouts/base.layout.astro";
+import Hero from "@components/Hero.astro";
+import { readFile } from "fs/promises";
+import Contact from "@components/Contact.astro";
+import Carousel from "@components/Carousel.astro";
+import "../app.css";
+import About from "@components/About.astro";
+import Services from "@components/Services.astro";
 
-const all = await readFile("src/data/services/services.json")
-const services = JSON.parse(all.toString())
+const all = await readFile("src/data/services/services.json");
+const services = JSON.parse(all.toString());
 ---
 
 <Layout>
   <Hero subtitle="Studio Arsenov" />
-    <!-- about us start -->
-    <About/>
-      <!--services start -->
-      <Services/>
-      <!--end services -->
-      <!--testimonials start -->
-      <section class="my-16 pt-10 bg-opacity-70" id="utisci">
-        <h3 class="text-center text-white text-4xl py-10">
-          Šta klijenti kažu o nama...
-        </h3>
-        <!--carousel -->
-        <Carousel />
-        <div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
-          <div
-            class="py-12 px-6 md:flex md:flex-col md:border-r md:border-gray-300 md:py-16 md:pl-0 md:pr-10 lg:pr-16"
-          >
-            <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
-              <div class="relative text-lg font-medium text-white md:flex-grow">
-                <svg
-                  class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-4 transform text-indigo-600"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
-                  ></path>
-                </svg>
-                <p class="relative text-xl">
-                  Najbolji ste, kreativni, kulturni, ljubazni...A slike
-                  savrsene!
-                </p>
-              </div>
-              <footer class="mt-8">
-                <div class="flex items-center">
-                  <div class="text-base font-medium text-white">Maja</div>
-                </div>
-              </footer>
-            </blockquote>
+  <!-- about us start -->
+  <About />
+  <!--services start -->
+  <Services />
+  <!--end services -->
+  <!--testimonials start -->
+  <section class="my-16 pt-10 bg-opacity-70" id="utisci">
+    <h3 class="text-center text-white text-4xl py-10">
+      Šta klijenti kažu o nama...
+    </h3>
+    <!--carousel -->
+    <!-- <Carousel /> -->
+    <div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
+      <div
+        class="py-12 px-6 md:flex md:flex-col md:border-r md:border-gray-300 md:py-16 md:pl-0 md:pr-10 lg:pr-16"
+      >
+        <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+          <div class="relative text-lg font-medium text-white md:flex-grow">
+            <svg
+              class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-4 transform text-indigo-600"
+              fill="currentColor"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+              ></path>
+            </svg>
+            <p class="relative text-xl">
+              Najbolji ste, kreativni, kulturni, ljubazni...A slike savrsene!
+            </p>
           </div>
-          <div
-            class="border-t-2 border-indigo-900 py-12 px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16"
-          >
-            <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
-              <div class="relative text-lg font-medium text-white md:flex-grow">
-                <svg
-                  class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-4 transform text-indigo-600"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
-                  ></path>
-                </svg>
-                <p class="relative text-xl">
-                  Uvek broj jedan u svom poslu. Slike su savrsene, ljubaznost na
-                  nivou... Decu lako opusti i animira da slike budu perfektne.
-                  Sve pohvale!!!
-                </p>
-              </div>
-              <footer class="mt-8">
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <div class="text-base font-medium text-white">Sladjana</div>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
+          <footer class="mt-8">
+            <div class="flex items-center">
+              <div class="text-base font-medium text-white">Maja</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+      <div
+        class="border-t-2 border-indigo-900 py-12 px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16"
+      >
+        <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+          <div class="relative text-lg font-medium text-white md:flex-grow">
+            <svg
+              class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-4 transform text-indigo-600"
+              fill="currentColor"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+              ></path>
+            </svg>
+            <p class="relative text-xl">
+              Uvek broj jedan u svom poslu. Slike su savrsene, ljubaznost na
+              nivou... Decu lako opusti i animira da slike budu perfektne. Sve
+              pohvale!!!
+            </p>
           </div>
-        </div>
-      </section>
-      <!--end testimonials -->
-      <!--contact start-->
-      <Contact />
-      <!--contact end -->
-    </div> 
-  </div>
+          <footer class="mt-8">
+            <div class="flex items-center">
+              <div class="flex items-center">
+                <div class="text-base font-medium text-white">Sladjana</div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <!--end testimonials -->
+  <!--contact start-->
+  <Contact />
+  <!--contact end -->
 </Layout>
