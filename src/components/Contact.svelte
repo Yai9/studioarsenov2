@@ -1,23 +1,70 @@
----
-import { config } from "@data/config"
-const messages = {
-  required: "Neophodno polje.",
-  invalidEmail: "Neispravna e-mail adresa.",
-}
----
+<script>
+  import { onMount } from "svelte";
+  import { config } from "@data/config";
 
-<style>
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  let isValidCountry = true;
+  let name = "";
+  let email = "";
+  let message = "";
+  let errors = {};
+
+  async function fetchApi() {
+    try {
+      const data = await fetch("https://ipinfo.io/json");
+      const response = await data.json();
+      if (response.country === "RS") {
+        isValidCountry = true;
+      } else {
+        isValidCountry = false;
+      }
+    } catch (err) {
+      isValidCountry = false;
+    }
+  }
+  onMount(() => {
+    try {
+      fetchApi();
+      document.getElementById("form").addEventListener("submit", handleSubmit);
+    } catch (err) {
+      console.err("Country check failed.");
+    }
+  });
+
+  async function handleSubmit(event) {
+    if (validateForm() && !isValidCountry) {
+      event.preventDefault();
+      alert("You can only submit inqueries from Europe.");
+    } else if (validateForm() && isValidCountry) {
+      console.log("Form submitted successfully!");
+    } else {
+      event.preventDefault();
+    }
   }
 
-  /* Firefox */
-  input[type="number"] {
-    -moz-appearance: textfield;
+  function validateForm() {
+    errors = {};
+    let isValid = true;
+
+    if (!name.trim()) {
+      errors.name = "Neophodno polje.";
+      isValid = false;
+    }
+
+    if (!email.trim()) {
+      errors.email = "E-mail je neophodan.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "E-mail nije ispravan.";
+      isValid = false;
+    }
+
+    if (!message.trim()) {
+      errors.message = "Neophodno polje.";
+      isValid = false;
+    }
+    return isValid;
   }
-</style>
+</script>
 
 <!--contact start-->
 <div class="relative bg-[#070707]" id="kontakt">
@@ -92,79 +139,47 @@ const messages = {
     >
       <div class="mx-auto max-w-lg lg:max-w-none">
         <form
-          id="contactForm"
-          method="POST"
-          data-=""
+          id="form"
+          method="post"
           class="grid grid-cols-1 gap-y-6"
-          x-data="validateForm()"
-          x-init="
-            $watch('fullname', value => { validate('fullname') })
-            $watch('phone', value => { validate('phone') })
-            $watch('email', value => { validate('email') })
-            $watch('message', value => { validate('message') })
-            $watch('submitInvalid')
-            "
           action="https://formsubmit.co/studioarsenov@gmail.com"
         >
           <input type="hidden" name="_captcha" value="false" />
           <div>
             <label for="full-name" class="sr-only">Ime/Prezime</label>
             <input
+              on:keydown={() => name.trim() !== "" && (errors.name = "")}
+              bind:value={name}
               type="text"
               name="full-name"
               id="full-name"
-              :class="{'border border-red-500':  validation.fullname.touched && fullname === '' || (submitInvalid && fullname === '')}"
-              x-on:blur="inputFieldBlur('fullname')"
-              x-model="fullname"
               autocomplete="name"
               class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="Ime/Prezime"
-              required
             />
-            <div class="validate" x-cloak>
-              <div
-                x-show="validation.fullname.touched && fullname === '' || (submitInvalid && fullname === '')"
-              >
-                <span class="text-sm italic text-red-500">
-                  <p>*{messages.required}</p>
-                </span>
+            {#if errors.name}
+              <div class="text-red-600 font-medium text-lg">
+                {errors.name}
               </div>
-
-              <span class="text-sm italic text-red-500">
-                <div x-text="validation.fullname.message"></div>
-              </span>
-            </div>
+            {/if}
           </div>
           <div>
             <label for="email" class="sr-only">E-mail adresa</label>
             <input
+              on:keydown={() => email.trim() !== "" && (errors.email = "")}
+              bind:value={email}
               id="email"
               name="email"
               type="email"
-              :class="{'border border-red-500': validation.email.touched && email === '' || (submitInvalid && email === '')}"
-              x-on:blur="inputFieldBlur('email')"
-              x-model="email"
-              name="email"
               autocomplete="email"
               class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="E-mail adresa"
-              required
             />
-            <div class="validate" x-cloak>
-              <div x-show="validation.email.touched && email === ''">
-                <span class="text-sm italic text-red-500">
-                  <p>*{messages.required}</p>
-                </span>
+            {#if errors.email}
+              <div class="text-red-600 font-medium text-lg">
+                {errors.email}
               </div>
-              <div x-show="submitInvalid && email.trim().length < 2">
-                <span class="text-sm italic text-red-500">
-                  <p>{messages.invalidEmail}</p>
-                </span>
-              </div>
-              <span class="text-sm italic text-red-500">
-                <div x-text="validation.email.message"></div>
-              </span>
-            </div>
+            {/if}
           </div>
           <div>
             <label for="phone" class="sr-only">Kontakt telefon</label>
@@ -180,28 +195,19 @@ const messages = {
           <div>
             <label for="message" class="sr-only">Poruka</label>
             <textarea
+              on:keydown={() => message.trim() !== "" && (errors.message = "")}
+              bind:value={message}
               id="message"
               name="message"
-              :class="{'border border-red-500': validation.message.touched && message === '' || (submitInvalid && message === '')}"
-              x-on:blur="inputFieldBlur('message')"
-              x-model="message"
               rows="4"
               class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="Poruka"
-              required></textarea>
-            <div class="validate" x-cloak>
-              <div
-                x-show="validation.message.touched && message === '' || (submitInvalid && message === '')"
-              >
-                <span class="text-sm italic text-red-500">
-                  <p>*{messages.required}</p>
-                </span>
+            ></textarea>
+            {#if errors.message}
+              <div class="text-red-600 font-medium text-lg">
+                {errors.message}
               </div>
-
-              <span class="text-sm italic text-red-500">
-                <div x-text="validation.message.message"></div>
-              </span>
-            </div>
+            {/if}
           </div>
           <div>
             <button
@@ -218,3 +224,16 @@ const messages = {
 </div>
 
 <!--contact end -->
+
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+</style>

@@ -2,7 +2,7 @@
 import Layout from "@layouts/base.layout.astro";
 import Hero from "@components/Hero.astro";
 import { readFile } from "fs/promises";
-import Contact from "@components/Contact.astro";
+import Contact from "@components/Contact.svelte";
 import Carousel from "@components/Carousel.astro";
 import "../app.css";
 import About from "@components/About.astro";
@@ -87,6 +87,6 @@ const services = JSON.parse(all.toString());
   </section>
   <!--end testimonials -->
   <!--contact start-->
-  <Contact />
+  <Contact client:load />
   <!--contact end -->
 </Layout>
