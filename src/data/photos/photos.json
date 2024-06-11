@@ -2,144 +2,145 @@
   {
     "main": {
       "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820316/DEJ_3278_hsjzu9.jpg",
-      "title": "main1",
-      "alt": "main1"
+      "title": "Naslovna",
+      "alt": "Naslovna"
     },
+    "title": "Slike sa venčanja",
     "slug": "vencanja",
     "photos": [
       {
-        "title": "slika1",
-        "alt": "slika1",
+        "title": "Slika 1",
+        "alt": "Slika 1",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1771_1_icao9b.jpg"
       },
       {
-        "title": "slika2",
-        "alt": "slika2",
+        "title": "Slika 2",
+        "alt": "Slika 2",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820309/DEJ_1547_boep7r.jpg"
       },
       {
-        "title": "slika3",
-        "alt": "slika3",
+        "title": "Slika 3",
+        "alt": "Slika 3",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820239/DEJ_0073_vj8f6v.jpg"
       },
       {
-        "title": "slika4",
-        "alt": "slika4",
+        "title": "Slika 4",
+        "alt": "Slika 4",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820305/DEJ_0976_jrh469.jpg"
       },
       {
-        "title": "slika5",
-        "alt": "slika5",
+        "title": "Slika 5",
+        "alt": "Slika 5",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820305/DEJ_1397_pgxnwh.jpg"
       },
       {
-        "title": "slika6",
-        "alt": "slika6",
+        "title": "Slika 6",
+        "alt": "Slika 6",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820307/DEJ_1386_nvnaek.jpg"
       },
       {
-        "title": "slika7",
-        "alt": "slika7",
+        "title": "Slika 7",
+        "alt": "Slika 7",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820308/DEJ_1588_ommneq.jpg"
       },
       {
-        "title": "slika8",
-        "alt": "slika8",
+        "title": "Slika 8",
+        "alt": "Slika 8",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820310/DEJ_1169_e965no.jpg"
       },
       {
-        "title": "slika9",
-        "alt": "slika9",
+        "title": "Slika 9",
+        "alt": "Slika 9",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820310/DEJ_1717_1_edjfrn.jpg"
       },
       {
-        "title": "slika11",
-        "alt": "slika11",
+        "title": "Slika 10",
+        "alt": "Slika 10",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820310/DEJ_2570_b1mpfd.jpg"
       },
       {
-        "title": "slika12",
-        "alt": "slika12",
+        "title": "Slika 11",
+        "alt": "Slika 11",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820312/DEJ_1859_hf6wy1.jpg"
       },
       {
-        "title": "slika13",
-        "alt": "slika13",
+        "title": "Slika 12",
+        "alt": "Slika 12",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820314/DEJ_3952_v8amsf.jpg"
       },
       {
-        "title": "slika14",
-        "alt": "slika14",
+        "title": "Slika 13",
+        "alt": "Slika 13",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820318/DEJ_4669_m2ax2o.jpg"
       },
       {
-        "title": "slika15",
-        "alt": "slika15",
+        "title": "Slika 14",
+        "alt": "Slika 14",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820319/DEJ_4567_nk2m42.jpg"
       },
       {
-        "title": "slika16",
-        "alt": "slika16",
+        "title": "Slika 15",
+        "alt": "Slika 15",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820319/DEJ_3220_ned8e3.jpg"
       },
       {
-        "title": "slika17",
-        "alt": "slika17",
+        "title": "Slika 16",
+        "alt": "Slika 16",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820319/DEJ_2795_vlb418.jpg"
       },
       {
-        "title": "slika18",
-        "alt": "slika18",
+        "title": "Slika 17",
+        "alt": "Slika 17",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820320/DEJ_3177_srrc7a.jpg"
       },
       {
-        "title": "slika19",
-        "alt": "slika19",
+        "title": "Slika 18",
+        "alt": "Slika 18",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820320/DEJ_4912_irjl7l.jpg"
       },
       {
-        "title": "slika20",
-        "alt": "slika20",
+        "title": "Slika 19",
+        "alt": "Slika 19",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820320/DEJ_4938_kdaivg.jpg"
       },
       {
-        "title": "slika21",
-        "alt": "slika21",
+        "title": "Slika 20",
+        "alt": "Slika 20",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820322/DEJ_6499_zgqtky.jpg"
       },
       {
-        "title": "slika22",
-        "alt": "slika22",
+        "title": "Slika 21",
+        "alt": "Slika 21",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820323/DEJ_7182_x2_cdhnfr.jpg"
       },
       {
-        "title": "slika22",
-        "alt": "slika22",
+        "title": "Slika 22",
+        "alt": "Slika 22",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820323/DEJ_5146_uvasxm.jpg"
       },
       {
-        "title": "slika23",
-        "alt": "slika23",
+        "title": "Slika 23",
+        "alt": "Slika 23",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820324/DEJ_5699_jjs11i.jpg"
       },
       {
-        "title": "slika24",
-        "alt": "slika24",
+        "title": "Slika 24",
+        "alt": "Slika 24",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820324/DEJ_6042_mq6bum.jpg"
       },
       {
-        "title": "slika25",
-        "alt": "slika25",
+        "title": "Slika 25",
+        "alt": "Slika 25",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820325/DEJ_5277_gzgbgl.jpg"
       },
       {
-        "title": "slika25",
-        "alt": "slika25",
+        "title": "Slika 26",
+        "alt": "Slika 26",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_8880_mkzbyl.jpg"
       },
       {
-        "title": "slika26",
-        "alt": "slika26",
+        "title": "Slika 27",
+        "alt": "Slika 27",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716820335/DEJ_7806_iyo9jv.jpg"
       }
     ]
@@ -147,54 +148,55 @@
   {
     "main": {
       "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716911455/TIN_7850_mh8pfy.jpg",
-      "title": "naslovna",
-      "alt": "naslovna"
+      "title": "Naslovna",
+      "alt": "Naslovna"
     },
     "slug": "studio",
+    "title": "Fotografije iz studija",
     "photos": [
       {
-        "title": "slika1",
-        "alt": "slika1",
+        "title": "Slika 1",
+        "alt": "Slika 1",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716910749/TIN_3702_ypxthn.jpg"
       },
       {
-        "title": "slika2",
-        "alt": "slika2",
+        "title": "Slika 2",
+        "alt": "Slika 2",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716910844/TIN_2967_qimeek.jpg"
       },
       {
-        "title": "slika3",
-        "alt": "slika3",
+        "title": "Slika 3",
+        "alt": "Slika 3",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716910890/TIN_2784_k9bwi0.jpg"
       },
       {
-        "title": "slika4",
-        "alt": "slika4",
+        "title": "Slika 4",
+        "alt": "Slika 4",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716910991/TIN_3455_zmuf8a.jpg"
       },
       {
-        "title": "slika5",
-        "alt": "slika5",
+        "title": "Slika 5",
+        "alt": "Slika 5",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716910998/TIN_2617_lwifuh.jpg"
       },
       {
-        "title": "slika6",
-        "alt": "slika6",
+        "title": "Slika 6",
+        "alt": "Slika 6",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716911968/TIN_9404_rtujap.jpg"
       },
       {
-        "title": "slika7",
-        "alt": "slika6",
+        "title": "Slika 7",
+        "alt": "Slika 7",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716911969/TIN_0268_c4sin1.jpg"
       },
       {
-        "title": "slika8",
-        "alt": "slika6",
+        "title": "Slika 8",
+        "alt": "Slika 8",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716911465/TIN_7436_umenqp.jpg"
       },
       {
-        "title": "slika9",
-        "alt": "slika6",
+        "title": "Slika 9",
+        "alt": "Slika 9",
         "url": "https://res.cloudinary.com/studioarsenov/image/upload/v1716911177/TIN_7876_vi1sef.jpg"
       }
     ]

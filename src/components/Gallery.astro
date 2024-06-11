@@ -1,57 +1,53 @@
 ---
-import JS from "../scripts/glightbox.astro"
-const { pics, main } = Astro.props
+import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
+import Image from "@components/Image.astro";
+const { pics, main, title } = Astro.props;
 ---
 
-<section class="pt-4 pb-8 px-4">
-  <div class="flex gap-y-4 flex-wrap">
-    <div
-      class={`flex lg:flex-col gap-x-4 lg:gap-x-0 w-full lg:w-3/12 h-auto lg:h-[775px] px-4 ${
-        pics.length >= 3 ? "lg:justify-between" : "gap-y-4"
-      }`}
-    >
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+  import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+  Fancybox.bind("[data-fancybox]", {});
+</script>
+
+<h3 class="text-gray-100 text-4xl mb-20 text-center font-semibold">{title}</h3>
+<img
+  src={main.url}
+  alt="Slika 1"
+  class="blurry-load h-full w-full object-cover object-center"
+  width="456"
+  height="556"
+  loading="lazy"
+  data-large={main.url}
+/>
+
+<!--gallery -->
+<div class="py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl">
+    <div class="mb-4 flex items-center justify-center gap-8 sm:mb-8 md:mb-12">
+      <h2
+        class="text-2xl font-bold justify-center text-gray-100 dark:text-primary lg:text-3xl"
+      >
+        Galerija
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 lg:grid-cols-3">
       {
-        pics.map((item, idx) => (
-          <ul class:list={[{ hidden: idx > 2 }, "relative w-full"]}>
-            <a
-              href={item.url}
-              data-zoomable="true"
-              data-draggable
-              data-glightbox
-              class:list={[
-                "block relative overflow-hidden w-full h-full max-w-full max-h-[140px] md:max-w-full md:max-h-full md:w-full md:h-[245px] bg-gray-100 group focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 gallery",
-              ]}
-            >
-              <div class="relative w-full h-full">
-                <div class="absolute bg-primary w-[inherit] h-[inherit] bg-opacity-50 flex justify-center items-center">
-                  {idx > 1 && pics.length > 3 && (
-                    <span class="text-4xl sm:text-6xl font-medium text-secondary">
-                      +{pics.length - 3}
-                    </span>
-                  )}
-                </div>
-                <img
-                  class="object-cover w-full h-full"
-                  src={item.url}
-                  alt={item.alt}
-                  title={item.title}
-                  width="200"
-                  height="200"
-                  loading="lazy"
-                />
-              </div>
-            </a>
-          </ul>
-        ))
+        pics.length !== 0 &&
+          pics.map((item, index) => (
+            <Image
+              image={optimizeCloudinaryImage(item.url, 800, 800)}
+              className={`w-[200px] h-[200px] md:w-full md:h-[500px] object-cover ${
+                index > 5 ? "hidden" : ""
+              }`}
+              dataFancybox="gallery"
+              dataCaption={item.alt}
+            />
+          ))
       }
     </div>
-    <div class="block w-full lg:w-9/12 lg:h-[755px] px-4">
-      <img
-        src={main.url}
-        loading="eager"
-        class="h-auto lg:h-[775px] w-full object-cover shadow-md"
-      />
-    </div>
   </div>
-</section>
-<JS />
+</div>
+<!--end gallery -->

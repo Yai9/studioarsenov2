@@ -1,0 +1,18 @@
+---
+const { image, className, dataFancybox, dataCaption } = Astro.props;
+---
+
+<img
+  loading="lazy"
+  class:list={[
+    "blurry-load w-full cursor-pointer brightness-100 hover:brightness-75 transition-all duration-300",
+    className,
+  ]}
+  width="500"
+  height="500"
+  data-fancybox={dataFancybox}
+  data-caption={dataCaption}
+  data-large={image}
+  src={image}
+  alt={dataCaption}
+/>
