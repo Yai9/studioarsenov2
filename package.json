@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@astrojs/vercel": "^7.6.0",
-    "@fancyapps/ui": "github:fancyapps/ui",
+    "@fancyapps/ui": "^5.0.30",
     "glightbox": "^3.2.0",
     "preact": "^10.7.3"
   }

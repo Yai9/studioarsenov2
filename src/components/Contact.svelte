@@ -154,7 +154,7 @@
               name="full-name"
               id="full-name"
               autocomplete="name"
-              class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              class="block w-full rounded-md bg-primary border-gray-400 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="Ime/Prezime"
             />
             {#if errors.name}
@@ -172,7 +172,7 @@
               name="email"
               type="email"
               autocomplete="email"
-              class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              class="block w-full rounded-md bg-primary border-gray-400 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="E-mail adresa"
             />
             {#if errors.email}
@@ -188,7 +188,7 @@
               name="phone"
               id="phone"
               autocomplete="tel"
-              class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              class="block w-full rounded-md bg-primary border-gray-400 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="Kontakt telefon"
             />
           </div>
@@ -200,7 +200,7 @@
               id="message"
               name="message"
               rows="4"
-              class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              class="block w-full rounded-md bg-primaryForeground border-gray-400 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               placeholder="Poruka"
             ></textarea>
             {#if errors.message}

@@ -3,6 +3,7 @@ import Layout from "@layouts/base.layout.astro";
 import { Icon } from "astro-icon";
 import "../app.css";
 import Image from "astro/components/Image.astro";
+import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
 ---
 
 <style>
@@ -87,7 +88,11 @@ import Image from "astro/components/Image.astro";
       </p>
       <Image
         class="aspect-[3/2] object-cover lg:aspect-auto h-full w-full"
-        src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911768/dejan3_rm9a08.png"
+        src={optimizeCloudinaryImage(
+          "https://res.cloudinary.com/studioarsenov/image/upload/v1716911768/dejan3_rm9a08.png",
+          2000,
+          1325
+        )}
         width="650"
         height="650"
         alt="Dejan"
@@ -96,7 +101,7 @@ import Image from "astro/components/Image.astro";
   </div>
   <!--team start -->
   <div class="bg-primary py-24 sm:py-40">
-    <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+    <div class="mx-auto max-w-6xl px-6 text-center lg:px-8">
       <div class="animate-fadeIn js-show-on-scroll mx-auto max-w-7xl">
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Upoznajte naš tim...
@@ -106,13 +111,21 @@ import Image from "astro/components/Image.astro";
         class="animate-fadeIn js-show-on-scroll my-4 rounded-lg w-full h-full"
         width="800"
         height="500"
-        src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911167/tim_nnueso.jpg"
+        src={optimizeCloudinaryImage(
+          "https://res.cloudinary.com/studioarsenov/image/upload/v1716911167/tim_nnueso.jpg",
+          1416,
+          1196
+        )}
         alt="tim"
       />
       <div class="grid grid-cols-2 justify-between gap-4">
         <Image
           class="animate-fadeIn js-show-on-scroll my-4 rounded-lg w-full h-full"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911353/dejan2_gwdma2.png"
+          src={optimizeCloudinaryImage(
+            "https://res.cloudinary.com/studioarsenov/image/upload/v1716911353/dejan2_gwdma2.png",
+            1200,
+            2131
+          )}
           width="300"
           height="600"
           loading="lazy"
@@ -122,7 +135,11 @@ import Image from "astro/components/Image.astro";
           class="animate-fadeIn js-show-on-scroll my-4 rounded-lg w-full h-full"
           width="300"
           height="600"
-          src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911487/dejan_qeo07x.png"
+          src={optimizeCloudinaryImage(
+            "https://res.cloudinary.com/studioarsenov/image/upload/v1716911487/dejan_qeo07x.png",
+            1500,
+            2664
+          )}
           loading="lazy"
           alt="dejan"
         />
@@ -141,7 +158,11 @@ import Image from "astro/components/Image.astro";
           <Image
             alt="Slika 1"
             sizes="(min-width: 640px) 18rem, 11rem"
-            src="https://res.cloudinary.com/studioarsenov/image/upload/v1716994879/DEJ_1676_1_qofv39.jpg"
+            src={optimizeCloudinaryImage(
+              "https://res.cloudinary.com/studioarsenov/image/upload/v1716994879/DEJ_1676_1_qofv39.jpg",
+              2456,
+              3696
+            )}
             width="3744"
             height="5616"
             decoding="async"
@@ -157,7 +178,11 @@ import Image from "astro/components/Image.astro";
           <Image
             alt="Slika 2"
             sizes="(min-width: 640px) 18rem, 11rem"
-            src="https://res.cloudinary.com/studioarsenov/image/upload/v1716912006/small-img-4_zpdckg.png"
+            src={optimizeCloudinaryImage(
+              "https://res.cloudinary.com/studioarsenov/image/upload/v1716912006/small-img-4_zpdckg.png",
+              1600,
+              2016
+            )}
             width="3936"
             height="2624"
             decoding="async"
@@ -173,7 +198,11 @@ import Image from "astro/components/Image.astro";
           <Image
             alt="Slika 3"
             sizes="(min-width: 640px) 18rem, 11rem"
-            src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911954/small-img-3_zfz6ur.png"
+            src={optimizeCloudinaryImage(
+              "https://res.cloudinary.com/studioarsenov/image/upload/v1716911954/small-img-3_zfz6ur.png",
+              2000,
+              1333
+            )}
             width="5760"
             height="3840"
             decoding="async"
@@ -189,7 +218,11 @@ import Image from "astro/components/Image.astro";
           <Image
             alt="Slika 4"
             sizes="(min-width: 640px) 18rem, 11rem"
-            src="https://res.cloudinary.com/studioarsenov/image/upload/v1716911472/DEJ_9473_seepl7.jpg"
+            src={optimizeCloudinaryImage(
+              "https://res.cloudinary.com/studioarsenov/image/upload/v1716911472/DEJ_9473_seepl7.jpg",
+              3696,
+              2456
+            )}
             width="2400"
             height="3000"
             decoding="async"
@@ -205,7 +238,11 @@ import Image from "astro/components/Image.astro";
           <Image
             alt="Slika 5"
             sizes="(min-width: 640px) 18rem, 11rem"
-            src="https://res.cloudinary.com/studioarsenov/image/upload/v1716820325/DEJ_5277_gzgbgl.jpg"
+            src={optimizeCloudinaryImage(
+              "https://res.cloudinary.com/studioarsenov/image/upload/v1716820325/DEJ_5277_gzgbgl.jpg",
+              2784,
+              4176
+            )}
             width="3744"
             height="5616"
             decoding="async"

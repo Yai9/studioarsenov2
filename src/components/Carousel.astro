@@ -2,35 +2,48 @@
 import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
 ---
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-
-<!-- Demo styles -->
 <style>
-  .swiper {
-    max-width: 330px;
-    width: 100%;
+  div#slider {
+    position: relative;
     height: 100%;
+  }
+
+  div#slider {
+    background: transparent;
+    font-family:
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 600px;
   }
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .swiper-slide img {
+  swiper-slide img {
     display: block;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
   }
 </style>
-
-<div class="my-10">
-  <div class="swiper mySwiper">
+<div class="testimonials">
+  <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img
@@ -38,9 +51,9 @@ import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
             "https://res.cloudinary.com/studioarsenov/image/upload/v1716911110/ss2_o1yo92.jpg",
             900
           )}
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="w-full h-[650px] object-contain"
+          alt="Swiper image 1"
+          title="Swiper image 1"
+          class="w-full h-[600px] object-contain"
           width="348.51"
           height="936"
           loading="eager"
@@ -52,9 +65,9 @@ import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
             "https://res.cloudinary.com/studioarsenov/image/upload/v1716911123/ss1_gfohdk.jpg",
             900
           )}
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="w-full h-[650px] object-contain"
+          alt="Swiper image 2"
+          title="Swiper image 2"
+          class="w-full h-[600px] object-contain"
           width="348.51"
           height="936"
           loading="eager"
@@ -66,9 +79,9 @@ import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
             "https://res.cloudinary.com/studioarsenov/image/upload/v1716911165/ss4_g9fqpl.jpg",
             900
           )}
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="w-full h-[650px] object-contain"
+          alt="Swiper image 3"
+          title="Swiper image 3"
+          class="w-full h-[600px] object-contain"
           width="348.51"
           height="936"
           loading="eager"
@@ -80,44 +93,69 @@ import { optimizeCloudinaryImage } from "@helpers/cloudinary.helper";
             "https://res.cloudinary.com/studioarsenov/image/upload/v1716911201/ss3_qhpdbu.jpg",
             900
           )}
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="w-full h-[650px] object-contain"
+          alt="Swiper image 4"
+          title="Swiper image 4"
+          class="w-full h-[600px] object-contain"
           width="348.51"
           height="936"
           loading="eager"
         />
       </div>
-      <!-- <div class="swiper-slide">
+      <div class="swiper-slide">
         <img
-          src="/assets/photos/ss5.jpg"
-          alt="sliderImage1"
-          title="sliderImage1"
-          class="w-full h-[650px] object-contain"
+          src="https://res.cloudinary.com/studioarsenov/image/upload/v1720001012/IMG-61353049cddcbadeea72d3b07b51cb21-V_fpmuan.jpg"
+          alt="Swiper image 5"
+          title="Swiper image 5"
+          class="w-full h-[600px] object-contain"
           width="348.51"
           height="936"
           loading="eager"
         />
-      </div> -->
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="https://res.cloudinary.com/studioarsenov/image/upload/v1720000826/IMG-f63e030ab92d898dc975b0112c734918-V_rdlnv0.jpg"
+          alt="Swiper image 6"
+          title="Swiper image 6"
+          class="w-full h-[600px] object-contain"
+          width="348.51"
+          height="936"
+          loading="eager"
+        />
+      </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
-<script type="module" defer>
-  var swiper3 = new Swiper(".mySwiper", {
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  const swiper = new Swiper(".testimonials .swiper", {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: true,
+    autoplay: true,
+    paginationClickable: true,
+    loop: true,
     grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-20%", 0, -1],
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      620: {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-      next: {
-        translate: ["100%", 0, 0],
+      // when window width is >= 480px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
+      // when window width is >= 640px
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
     },
   });
 </script>

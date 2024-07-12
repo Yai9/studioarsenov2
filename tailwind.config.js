@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0a0a0a",
+        primaryForeground: "#080808",
         secondary: "#ffffff",
         accent: "#000000",
       },
@@ -22,4 +23,4 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
   ],
-}
+};
